@@ -30,7 +30,10 @@ class Bus
   end
 
   def pick_up_from_stop(bus_stop)
-    @passengers << bus_stop
+    for passenger in bus_stop.queue
+      @passengers << passenger
+    end
+    bus_stop.passengers_board_bus()
   end
 
 end

@@ -42,6 +42,7 @@ class TestBus < MiniTest::Test
   def test_pick_up_from_stop
     @bus.pick_up_from_stop(@busstop)
     assert_equal([], @busstop.queue)
+    assert_equal([@passenger2, @passenger3], @bus.passengers)
   end
 
 end

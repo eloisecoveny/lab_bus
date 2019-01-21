@@ -5,11 +5,15 @@ class BusStop
 
   def initialize(name, queue)
     @name = name
-    @queue = []
+    @queue = queue
   end
 
   def add_to_queue(passenger)
     @queue << passenger
+  end
+
+  def passengers_board_bus()
+    @queue.clear()
   end
 
 end
